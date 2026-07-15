@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Joshua Utik — Front-End Engineer</title>
+<meta name="description" content="Portfolio of Joshua Utik, a front-end engineer with 4 years of experience building fast, accessible web interfaces.">
+
+<!-- Google Fonts: Space Grotesk (display), Inter (body), JetBrains Mono (code accents) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ HEADER / NAV ============ -->
+<!-- Styled like a browser/editor tab bar to match the "code editor" theme used in the hero -->
+<header class="site-header" id="site-header">
+  <div class="header-inner">
+    <a href="#hero" class="logo" aria-label="Joshua Utik, home">
+      <span class="logo-bracket">&lt;</span>JU<span class="logo-bracket">/&gt;</span>
+    </a>
+
+    <nav class="site-nav" id="site-nav" aria-label="Primary">
+      <a href="#hero" class="nav-link active-link">Home</a>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#contact" class="nav-link">Contact</a>
+      <a href="#" class="nav-link nav-cta">Résumé</a>
+    </nav>
+
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="site-nav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============ HERO ============ -->
+  <!-- Signature element: hero rendered as a mock code editor window, "typing" the intro as JSX -->
+  <section class="hero" id="hero">
+    <div class="hero-inner">
+
+      <div class="hero-copy">
+        <p class="eyebrow">// front-end developer &amp; web dev instructor · 4 yrs</p>
+        <h1 class="hero-title">
+          Joshua Utik<br>
+          <span class="hero-title-accent">builds and teaches</span> the modern web.
+        </h1>
+        <p class="hero-sub">
+          I build fast, responsive front ends with HTML, CSS, JavaScript, Bootstrap, React, and Tailwind — and I've
+          spent 4 years as a web development instructor helping others do the same, from
+          HTML fundamentals through to shipping real React apps.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">View projects</a>
+          <a href="#contact" class="btn btn-ghost">Get in touch</a>
+        </div>
+        <ul class="hero-stats">
+          <li><span class="stat-num">4</span><span class="stat-label">years teaching web dev</span></li>
+          <li><span class="stat-num">300+</span><span class="stat-label">students mentored</span></li>
+          <li><span class="stat-num">98</span><span class="stat-label">avg. Lighthouse score</span></li>
+        </ul>
+      </div>
+
+      <!-- Mock code editor: acts as both hero visual and profile picture frame -->
+      <div class="editor-window" aria-hidden="false">
+        <div class="editor-titlebar">
+          <span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span>
+          <span class="editor-filename">profile.jsx</span>
+        </div>
+        <div class="editor-body">
+<pre class="code-block"><code><span class="tok-kw">import</span> Joshua Utik <span class="tok-kw">from</span> <span class="tok-str">'./team'</span><span class="tok-punc">;</span>
+
+<span class="tok-kw">export default function</span> <span class="tok-fn">Profile</span>() {
+  <span class="tok-kw">return</span> (
+    <span class="tok-tag">&lt;Engineer</span>
+      <span class="tok-attr">photo</span>=<span class="tok-str">{avatar}</span>
+      <span class="tok-attr">role</span>=<span class="tok-str">"Front-End Developer &amp; Instructor"</span>
+      <span class="tok-attr">focus</span>=<span class="tok-str">"React · Bootstrap · Teaching"</span>
+    <span class="tok-tag">/&gt;</span>
+  )<span class="tok-punc">;</span>
+}</code></pre>
+          <!-- Profile picture: swap the .avatar-svg block below for a real <img src="your-photo.jpg" alt="Your name"> -->
+          <div class="avatar-frame">
+            <!-- <svg class="avatar-svg" viewBox="0 0 160 160" role="img" aria-label="Illustrated avatar of Joshua Utik">
+              <defs>
+                <linearGradient id="avatarBg" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#1F2937"/>
+                  <stop offset="100%" stop-color="#0D1117"/>
+                </linearGradient>
+              </defs>
+              <rect width="160" height="160" rx="20" fill="url(#avatarBg)"/>
+              <circle cx="80" cy="66" r="30" fill="#E3B341"/>
+              <path d="M80 100c-30 0-46 16-46 40h92c0-24-16-40-46-40z" fill="#56D4DD"/>
+              <circle cx="68" cy="62" r="4" fill="#0D1117"/>
+              <circle cx="92" cy="62" r="4" fill="#0D1117"/>
+              <path d="M68 78c4 5 20 5 24 0" stroke="#0D1117" stroke-width="3" fill="none" stroke-linecap="round"/>
+            </svg> -->
+
+            <img src="./Assets/josh.png" alt="Joshua Utik" class="avatar-img">
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <a href="#skills" class="scroll-cue" aria-label="Scroll to skills section">
+      <span></span>
+    </a>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section class="skills" id="skills">
+    <div class="section-inner">
+      <h2 class="section-title">What I build with</h2>
+      <p class="section-sub">Six years as a web development instructor, alongside building production front ends — here's the toolkit I use and teach every day.</p>
+
+      <div class="skills-grid">
+
+        <div class="skill-card">
+          <h3 class="skill-card-title">Core Languages</h3>
+          <div class="tag-row">
+            <span class="tag">JavaScript</span>
+            <span class="tag">HTML5</span>
+            <span class="tag">CSS3</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <h3 class="skill-card-title">Frameworks &amp; Styling</h3>
+          <div class="tag-row">
+            <span class="tag">React</span>
+            <span class="tag">Bootstrap</span>
+            <span class="tag">Tailwind CSS</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <h3 class="skill-card-title">Tools &amp; Workflow</h3>
+          <div class="tag-row">
+            <span class="tag">Git &amp; GitHub</span>
+            <span class="tag">AI Web Builders</span>
+            <span class="tag">Responsive Design</span>
+            <span class="tag">WordPress</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <h3 class="skill-card-title">Teaching &amp; Mentorship</h3>
+          <div class="tag-row">
+            <span class="tag">6 Yrs Instructing</span>
+            <span class="tag">Curriculum Design</span>
+            <span class="tag">Code Review</span>
+            <span class="tag">Student Mentoring</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section class="projects" id="projects">
+    <div class="section-inner">
+      <p class="eyebrow">// projects</p>
+      <h2 class="section-title">Selected work</h2>
+      <p class="section-sub">A handful of products I've led the front-end on, end to end. Click any card for the full write-up.</p>
+
+      <div class="project-grid" id="project-grid">
+        <!-- Project cards are rendered by JS from the projectData array in script.js,
+             so the modal content and card content always stay in sync.
+             See script.js -> projectData to edit/replace project info. -->
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ PROJECT DETAIL MODAL ============ -->
+<div class="modal-overlay" id="modal-overlay">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" id="modal">
+    <button class="modal-close" id="modal-close" aria-label="Close project details">&times;</button>
+    <div class="modal-content" id="modal-content">
+      <!-- Injected by script.js -->
+    </div>
+  </div>
+</div>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer" id="contact">
+  <div class="section-inner footer-inner">
+    <div class="footer-main">
+      <p class="eyebrow">// contact</p>
+      <h2 class="section-title">Let's build something.</h2>
+      <p class="section-sub">
+        Open to front-end and full-stack roles, freelance builds, and interesting problems in general.
+        Fastest way to reach me is email.
+      </p>
+      <a href="mailto:joshuautik01@gmail.com" class="btn btn-primary">joshuautik01@gmail.com</a>
+    </div>
+
+    <div class="footer-links">
+      <div class="footer-col">
+        <h3>Elsewhere</h3>
+        <ul>
+          <li><a href="https://github.com/joshutik">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/utik">LinkedIn</a></li>
+          <li><a href="https://twitter.com/joshua_utik">Twitter / X</a></li>
+
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Site</h3>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; <span id="year"></span> Joshua Utik. Built with HTML, CSS &amp; JavaScript</p>
+  </div>
+</footer>
+
+<button class="back-to-top" id="back-to-top" aria-label="Back to top">↑</button>
+
+<script src="script.js"></script>
+</body>
+</html>
